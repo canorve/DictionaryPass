@@ -10,5 +10,7 @@ can select one from it.
 
 To run it, just type:
 
+./DictionaryPassw.py [WordFile]
 
+Where WordFile is the list of words used to create the passwords
 
