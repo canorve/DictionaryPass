@@ -219,8 +219,11 @@ def main():
 
         word= params[0]
 
-        linprint="{} \n".format(word)
-        filhdout.write(linprint)
+        if (len(word) >= 5):
+            linprint="{} \n".format(word)
+            filhdout.write(linprint)
+#            print(word)
+
 
         for line2 in lines2:
 
@@ -230,15 +233,18 @@ def main():
 
             newword=word+word2
 
-            linprint="{} \n".format(newword)
-            filhdout.write(linprint)
-
+            if (len(newword) >= 5):
+                linprint="{} \n".format(newword)
+                filhdout.write(linprint)
+#                print(newword)
 
     filhdin.close()
     filhdout.close()
 
 
 
+    os.remove("tempwords.txt")
+    os.remove("tempwords2.txt")
 
 
 
